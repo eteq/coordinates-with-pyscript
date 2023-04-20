@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Astropy Coordinate Conversion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
+</head>
+<body>
+    <h1>Convert Coordinates with <a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html">astropy SkyCoord</a></h1>
+    <input id="incoo" placeholder="enter a coordinate here">
+    
+    <br>
+    <label for="inputframe">Input frame:</label>
+    <select name="inputframe" id="inputframe">
+    </select>
+    <br>
+    
+    <label for="outputframe">Output frame:</label>
+    <select name="outputframe" id="outputframe">
+    </select>
+
+    <br>
+    <button id="convertbutton" py-click="convert()" disabled>Convert!</button>
+    <br>
+
+    <span id="outputcoo">No conversion done yet</span>
+    
+    <py-config src="./pyscript.toml"></py-config>
+    <py-script src="./main.py"></py-script>
+</body>
+</html>
